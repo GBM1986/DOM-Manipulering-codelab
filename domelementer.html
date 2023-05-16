@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM manipulering</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/template/main.css">
+    <link rel="stylesheet" href="assets/css/template/site.css">
+    <link rel="stylesheet" href="assets/css/opgaver/domelements.css">
+    <script src="assets/js/opgaver/domelementer.js" defer></script>
+</head>
+
+<body>
+    <header>
+
+        <section class="assignmentTopSection">
+            <h1>DOM manipulering</h1>
+            <nav>
+                <a href="index.html">back</a>
+            </nav>
+
+            <br><br>
+            <p>I JavaScript kan man bruge forskellige metoder til at vælge elementer på en HTML-side. Nogle af de mest
+                almindelige metoder er:</p>
+            <ul>
+                <li>
+                    <code>getElementById(id)</code> - Vælger et enkelt element ud fra dets id.
+                </li>
+                <li><code>getElementsByClassName(className)</code> - Vælger en liste af elementer ud fra deres
+                    klasse.
+                </li>
+                <li><code>getElementsByTagName(tagName)</code> - Vælger en liste af elementer ud fra deres HTML-tag.
+                </li>
+            </ul>
+
+
+            <h2>getElementById</h2>
+            <p>Med getElementById - funktionen kan man vælge et enkelt element ud fra dets id. <br> Her er et eksempel:
+            </p>
+            <pre>
+            	let minDiv = document.getElementById("min-div");
+            	</pre>
+
+            <h2>getElementsByClassName</h2>
+            <p>Med getElementsByClassName - funktionen kan man vælge en liste af elementer ud fra deres class.
+                <br> Her er et eksempel:
+            </p>
+            <pre>
+            	let alleParagraffer = document.getElementsByClassName("min-class");
+            	</pre>
+
+            <h2>getElementsByTagName</h2>
+            <p>Med getElementsByTagName- funktionen kan man vælge en live HTML Collection af elementer ud fra deres
+                HTML-tag. <br> Her er
+                et
+                eksempel:</p>
+            <pre>
+            	let alleBilleder = document.getElementsByTagName("img");
+            	</pre>
+
+            <p>Alle tre funktioner returnerer en live HTML Collection af elementer, som man derefter kan arbejde med ved
+                hjælp af
+                DOM-manipulation.</p>
+            </p>
+            <br>
+
+            <h2>Live HTML Collection</h2>
+            <p>En Live HTML Collection i JavaScript er en samling af HTML-elementer, som automatisk opdateres, når der
+                sker
+                ændringer i dokumentet. Det betyder, at hvis man tilføjer eller fjerner et element fra dokumentet, vil
+                Live HTML
+                Collection også automatisk blive opdateret med det nye antal elementer.</p>
+            <p>Live HTML Collection kan bruges til at vælge en gruppe af HTML-elementer, som man vil manipulere på samme
+                måde.
+                For eksempel kan man bruge en Live HTML Collection til at ændre farven på alle elementer af samme type
+                eller til
+                at tilføje en event listener til alle knapper på en side.</p>
+            <p>Når man bruger en Live HTML Collection i JavaScript, kan man konvertere en collection til array ved hjælp
+                af array.from() funktionen, og dermed få adgang til de enkelte elementer ved hjælp
+                af
+                indeksering eller iteration f.eks. map() funktionen.
+            </p>
+            <br>
+
+
+            <h2>createElment()</h2>
+            <p>createElment er en metode i JavaScript, som bruges til at oprette nye HTML-elementer. Her er et eksempel
+                på,
+                hvordan man kan oprette en ny "div" element:</p>
+            <pre><code>
+                let nyDiv = document.createElement('div');
+            </code></pre>
+            </p>
+            <p>
+                Her er et eksempel på, hvordan man kan tilføje tekst til det nye "div" element:
+            </p>
+            <pre><code>
+                nyDiv.innerText ='jubii jeg er et nyt div' ;
+                        </code></pre>
+            <br>
+            <h2>appendChild()</h2>
+            <p>
+                Du kan bruge appendChild() til at tilføje dit nye DOM element til et eksisterende element. Her er et
+                eksempel på, hvordan man kan tilføje nyDiv fra før, til et DOM element.:
+            </p>
+            <pre><code>
+            const myDomElement = document.getElementById('hotId');
+            myDomElement.appendChild(nyDiv);
+              
+                                    </code></pre>
+
+
+            <h1>Opgaver</h1>
+    </header>
+
+    </section>
+
+
+    <section class="assignmentArea">
+        <header class="easy"></header>
+        <article>
+            <h3>Opgave 1</h3>
+            <p>Se i filen domelementer.js under opgave 1</p>
+        </article>
+
+        <div id="opgaveOne">
+            <figure id="redFigure" class="myFigure">
+                <h3>RED</h3>
+            </figure>
+
+            <figure id="yellowFigure" class="myFigure">
+                <h3>YELLOW</h3>
+            </figure>
+        </div>
+    </section>
+
+    <section class="assignmentArea">
+        <header class="easy"></header>
+        <article>
+            <h3>Opgave 2</h3>
+            <p>Se i filen domelementer.js under opgave 2</p>
+
+
+            <div id="opgaveTwo">
+                Dit resultat vises her
+            </div>
+        </article>
+    </section>
+
+
+    <section class="assignmentArea">
+        <header class="medium"></header>
+        <article>
+            <h3>Opgave 3</h3>
+            <p>Se i filen domelementer.js under opgave 3</p>
+        </article>
+
+        <div id="opgaveTwo">
+
+            <figure class="purpleFigures myFigure">
+                <h3>P1</h3>
+            </figure>
+            <figure class="purpleFigures myFigure">
+                <h3>P2</h3>
+            </figure>
+            <figure class="purpleFigures myFigure">
+                <h3>P3</h3>
+            </figure>
+            <figure class="purpleFigures myFigure">
+                <h3>P4</h3>
+            </figure>
+            <figure class="purpleFigures myFigure">
+                <h3>P5</h3>
+            </figure>
+        </div>
+    </section>
+
+    <section class="assignmentArea">
+        <header class="hard"></header>
+        <article>
+            <h3>Opgave 4</h3>
+            <p>Se i filen domelementer.js under opgave 4</p>
+
+
+            <div id="opgaveFour">
+                Dit resultat vises her
+            </div>
+        </article>
+    </section>
+
+
+    <footer>
+        <nav>
+            <a href="index.html">back</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
